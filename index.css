@@ -1,0 +1,38 @@
+body{
+    background-color: gray;
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex-container{
+    color: rgb(196, 46, 201);
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+}
+
+.generator-box{
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    margin: 0 100px 0 100px;
+    border-radius: 50%;
+}
+
+input{
+    margin: 0 10px 0 10px;
+}
+
+.data-box{
+    margin: 9px;
+}
+
+table{
+    width: 100%;
+    background-color: ivory;
+}

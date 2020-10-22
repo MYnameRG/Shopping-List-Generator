@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>List Generator</title>
+</head>
+<body ng-app="listApp" ng-controller="generatorData">
+    <div class="flex-container">
+        <h1><u>Shopping List Generator</u></h1>
+    </div>
+    <div class="generator-box">
+        Brand Name: <input type="text" ng-model="brand"/>
+        Product Name: <input type="text" ng-model="product" />
+        Quantity: <input type="text" ng-model="quantity" />
+        <input type="button" value="Add" ng-click="onAddElement(brand,product,quantity)" />
+        <input type="button" value="Clear" ng-click="onClear()" />
+        <input type="button" value="Print" ng-click="onPrint()" />
+    </div>
+    <div class="data-box">
+        <table border="1">
+            <thead>
+                <th>Serial No.</th>
+                <th>Product Name</th>
+                <th>Brand</th>
+                <th>Quantity</th>
+                <th>Delete/Edit Item</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in product_array" >
+                    <td>{{product.id}}</td>
+                    <td>{{product.brandName}}</td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td><input type="button" value="Delete" ng-click="onDelete(product.id)" /></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="5">****The money is not refundable here..</td>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
